@@ -2,16 +2,15 @@ import puppeteerUtil from './pupeerUtil.js';
 
 var snapnum = 0;//用于记录截图的序号
 var currentdate = new Date();
-var formattedDate = new Intl.DateTimeFormat('en-US', {
-    year: 'numeric',
-    month: 'numeric',
-    day: 'numeric',
-    hour: 'numeric',
-    minute: 'numeric',
-    second: 'numeric',
-    hour12: false  // 使用24小时制
-  }).format(currentdate).replace(/\s/g, '');
-
+var formattedDate = new Intl.DateTimeFormat('zh-CN', {
+  year: 'numeric',
+  month: '2-digit',
+  day: '2-digit',
+  hour: '2-digit',
+  minute: '2-digit',
+  second: '2-digit',
+  hour12: false  // 使用24小时制
+}).format(currentdate).replace(/\D/g, '');
 
 export async function click_intent(locator) {
     // 使用 split 分割字符串
