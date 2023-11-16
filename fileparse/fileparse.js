@@ -25,7 +25,7 @@ function convertJsToChromeLogic(jsContent) {
     const lines = jsContent.split('\n');
 
     // 初始化DevTools命令
-    let devToolsCommands = `import {click_intent,exist,wait,type_intent,select_intent,date_intent} from '../chromeevent/chromeEvent.js';\nimport puppeteerUtil from  '../chromeevent/pupeerheader.js';\n\n\n`;
+    let devToolsCommands = `import {click_intent,exist,wait,type_intent,select_intent,date_intent} from '../chromeevent/chromeEvent.js';\nimport puppeteerUtil from  '../chromeevent/pupeerUtil.js';\n\n\n`;
 
     // 遍历每一行进行转换
     lines.forEach(line => {
