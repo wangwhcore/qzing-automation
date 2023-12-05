@@ -4,8 +4,8 @@
       {
         "type": "node",
         "request": "launch",
-        "name": "Debug a.js",
-        "program": "${workspaceFolder}/test/a.js",
+        "name": "Debug a2.js",
+        "program": "${workspaceFolder}/test/a2.js",
         "skipFiles": [
           "<node_internals>/**"
         ],
@@ -21,7 +21,7 @@
           "<node_internals>/**"
         ],
         "args":[
-            "${workspaceFolder}/test/a.tag"
+            "${workspaceFolder}/test/a2.tag"
         ],
         "runtimeArgs": ["--inspect-brk"],
         "port": 9230

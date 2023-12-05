@@ -18,11 +18,16 @@ export async function click_intent(locator) {
     var xpath = await findBestMatch(puppeteerUtil.page, locator)
     try {
         var inputElement = await puppeteerUtil.page.$x(xpath);
-        if (inputElement.length == 0) console.log("could not found " + locator);
-        for (var i = 0; i < inputElement.length; i++) {
-            if (isClickable(inputElement[i])) {
-                await inputElement[i].click();
-                break;
+        if (inputElement.length == 0) {
+            console.log("could not found " + locator);
+            //执行页面分析并检索关键字
+            
+        }else{
+            for (var i = 0; i < inputElement.length; i++) {
+                if (isClickable(inputElement[i])) {
+                    await inputElement[i].click();
+                    break;
+                }
             }
         }
     } catch (e) {

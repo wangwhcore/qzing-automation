@@ -19,7 +19,10 @@ const puppeteerUtil = {
         if (!puppeteerUtil.browser) {
             await puppeteerUtil.initialize();
         }
+      
+
         puppeteerUtil.page = await puppeteerUtil.browser.newPage();
+        // await puppeteerUtil.page.maximize();
         await puppeteerUtil.page.goto(url);
         console.log(`open page sucesss:${url}`);
         // 等待某个条件满足，最长等待时间为5秒
